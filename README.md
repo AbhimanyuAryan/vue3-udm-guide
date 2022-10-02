@@ -67,7 +67,7 @@
   <input type="text" v-on:input="changeTitle">
   <p>{{ title }}</p>
   <a v-bind:href="link">open link</a>
-  <img :src="image">
+  <img :class="" :alt="" :src="image">
 </div>
 
 <script type="text/javascript">
