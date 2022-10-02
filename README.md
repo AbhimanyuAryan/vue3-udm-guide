@@ -82,3 +82,31 @@
   }).mount('#app')
 </script>
 ```
+
+
+## Events
+
+
+### Event Handling
+
+> go jsfiddle : [demo](https://jsfiddle.net/abhi_jl/82t09qyh/14/)
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+  const app = Vue.createApp({
+    data() {
+      return {
+          title: 'The Final Empire',
+          link: 'https://lmgtfy.app/?q=the+final+empire',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Median_Empire.jpg'
+      }
+    }
+  }).mount('#app')
+</script>
+```

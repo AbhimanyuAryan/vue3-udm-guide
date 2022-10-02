@@ -9,9 +9,8 @@
 
 <body>
   <div id="app">
-    <p>{{ title }}</p>
-    <a v-bind:href="link">open link</a>
-    <img :src="image">
+    <p ref="ptag" @mouseover="changeRed" v-on:mouseleave="changeBlack">{{ title }}</p>
+    <button v-on:click="changeTitle">Change Title</button>
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
