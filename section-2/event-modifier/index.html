@@ -1,0 +1,23 @@
+#TODO: unfinished
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="utf-8">
+  <title>Vue3 Guide</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-on:mousemove="updateCoordinates">Move your mouse! Coordinates: {{x}} / {{y}} -
+      <span v-on:mousemove.stop.prevent="">DEAD SHOT</span>
+    </p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
