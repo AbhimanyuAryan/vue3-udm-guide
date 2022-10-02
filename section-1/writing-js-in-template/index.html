@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="utf-8">
+  <title>Vue3 Guide</title>
+</head>
+
+<body>
+  <div id="app">
+    <button v-on:click="increase(2,$event)">Increase</button>
+    <button v-on:click="counter--">Decrease</button>
+    <p>counter {{counter}} | {{ counter * 2 > 10  ? 'Greate than 10' : 'Smaller than 10'}}</p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
