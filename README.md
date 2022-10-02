@@ -67,6 +67,7 @@
   <input type="text" v-on:input="changeTitle">
   <p>{{ title }}</p>
   <a v-bind:href="link">open link</a>
+  <img :src="image">
 </div>
 
 <script type="text/javascript">
@@ -74,7 +75,8 @@
     data() {
       return {
           title: 'The Final Empire',
-          link: 'https://lmgtfy.app/?q=the+final+empire'
+          link: 'https://lmgtfy.app/?q=the+final+empire',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Median_Empire.jpg'
       }
     }
   }).mount('#app')
