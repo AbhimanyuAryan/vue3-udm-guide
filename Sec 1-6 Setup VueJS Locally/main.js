@@ -4,4 +4,4 @@ const app = Vue.createApp({
             title: 'The Final Empire',
         }
     }
-})
+}).mount('#app')
