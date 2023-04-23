@@ -1,6 +1,6 @@
 > start : 2022-10-02
 
- Updating [Vue.js the complete guide from udemy]() by [@bonbopa](github.com/bonbonpa/vue3-udm-guide)
+ Updating [Vue.js the complete guide from udemy]() by [@bonbopa](https://github.com/bonbonpa/vue-udm-guide)
 
 > Note: I haven't done the course but I found this resource a good place for quick lookup/reference and found such resource missing for vue3 so felt like creating it :)
 
