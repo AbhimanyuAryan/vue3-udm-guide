@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>VueJS sec 2-3</title>
+  <link rel="stylesheet" href="">
+  <script src="https://unpkg.com/vue@next"></script>
+  
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" @input="changeTitle">
+    <p>{{ sayHello() }} {{ title }} </p>
+  </div>
+  <script>
+    const { createApp, ref } = Vue;
+
+    const app = createApp({
+      setup() {
+        const title = ref('Hello bonbonpa');
+
+        function changeTitle(event) {
+            console.log("this is run")
+            console.log(event.target.value)
+            title.value = event.target.value;
+        }
+
+        function sayHello() {
+          return 'Hello !';
+        }
+
+        return {
+          title,
+          changeTitle,
+          sayHello
+        };
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+
+</html>
