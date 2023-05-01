@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VueJS sec 2-5</title>
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    </div>
+</body>
+<script>
+    const { createApp, ref } = Vue;
+
+    const app = createApp({
+        setup() {
+            const title = ref('Hello bonbonpa');
+            const link = ref('http://google.com');
+
+            function changeTitle(event) {
+                title.value = event.target.value;
+            }
+
+            function sayHello() {
+                return title.value;
+            }
+
+            return {
+                title,
+                link,
+                changeTitle,
+                sayHello
+            };
+        }
+    });
+
+    app.mount('#app');
+</script>
+
+</html>

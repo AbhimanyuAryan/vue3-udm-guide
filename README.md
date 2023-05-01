@@ -109,9 +109,7 @@ Updating [Vue.js the complete guide from udemy by @bonbopa](https://github.com/b
 </script>
 ```
 
-###
-
-How to VueJS Template Syntax and instance work Together
+### How to VueJS Template Syntax and instance work Together
 
 ```html
 <div id="app">
@@ -139,6 +137,37 @@ How to VueJS Template Syntax and instance work Together
         changeTitle,
         sayHello,
       };
+    },
+  });
+
+  app.mount("#app");
+</script>
+```
+
+### Binding to Attributes
+
+```html
+<div id="app">
+  <input type="text" @input="changeTitle" />
+  <p>{{ sayHello() }} {{ title }}</p>
+</div>
+
+<script>
+  const { createApp } = Vue;
+
+  const app = createApp({
+    data() {
+      return {
+        title: "Hello bonbonpa",
+      };
+    },
+    methods: {
+      changeTitle(event) {
+        this.title = event.target.value;
+      },
+      sayHello() {
+        return "Hello !";
+      },
     },
   });
 
